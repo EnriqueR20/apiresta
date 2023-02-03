@@ -1,13 +1,10 @@
 {
-    "version":2,
-    "builds":[
-        {
-            "source":"./index.ts",
-            "use":"@vercel/node"
-            }],
-            "routes":[
-                {
-                    "source":"/(.*)",
-                    "dest":"/"
-                    }]
-}
+    "version": 2,
+    "name": "queryfood",
+    "builds": [
+       { "src": "app.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/app.js" }
+    ]
+ }
