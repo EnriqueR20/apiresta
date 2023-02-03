@@ -64,7 +64,7 @@ const Logeo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         }
         const token = jsonwebtoken_1.default.sign(user, process.env.TOKEN_SECRET, {
             /*Le asignamos el Rango de 1 hora al Token */
-            expiresIn: 60 * 60,
+            expiresIn: 24 * 60 * 60,
         });
         res.json({ auth: true, token });
     }

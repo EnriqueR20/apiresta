@@ -6,7 +6,7 @@ const middleware_1 = require("../middleware");
 /*creamos la INSTANCIA */
 const restauranteRouter = (0, express_1.Router)();
 /*Metodos POST */
-restauranteRouter.post("/", controller_1.CrearRestaurante);
+restauranteRouter.post("/", middleware_1.verifyToken, controller_1.CrearRestaurante);
 /*Metodos GET */
 restauranteRouter.get("/:id", middleware_1.verifyToken, controller_1.BuscarRestaurante);
 restauranteRouter.delete("/:id", controller_1.EliminarRestaurante);
