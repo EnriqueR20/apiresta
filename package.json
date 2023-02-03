@@ -1,14 +1,6 @@
 {
   "name": "query-food",
-  "version": "2",
-  "builds":[{
-    "source":"./index.ts",
-    "use":"@vercel/node"
-  }],
-  "routes":[{
-    "source":"/(.*)",
-    "dest":"/"
-  }],
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
